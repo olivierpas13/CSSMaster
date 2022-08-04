@@ -1,0 +1,254 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background:url("imgs/paven.png");
+}
+
+a{
+    color: #4b8119;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #8fcc55;
+}
+
+a:visited{
+    color: #3b6949;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select{
+    background-color: whitesmoke;
+    border-radius: 4px;
+    border: 1px solid gray;
+    color: gray;
+    padding: 2px 1px;
+    box-shadow: 0px 0px 3px gray inset;
+    transition: all 300ms;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus{
+    border: 1px solid #3b6949;
+    color: black;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button{
+    display: block;
+    border-radius: 5px;
+    width: 5em;
+    padding: 5px;
+    background: linear-gradient(90deg, rgba(112,178,49,1) 50%, rgba(75,129,25,1) 100%);
+    color: whitesmoke;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover{
+    box-shadow: 0px 0px 4px rgb(0, 0, 0) ;
+}
+
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+button:active{
+    box-shadow: 0px 0px 4px rgb(0, 0, 0) inset;
+}
+
+header a{
+    text-decoration: none;
+}
+
+header h1{
+    /* color: aliceblue; */
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-shadow: 0px 2px 2px rgb(32, 30, 30);
+    transition: all 300ms;
+}
+
+header h1:hover{
+    text-shadow: 0px 2px 2px rgb(32, 30, 30), 0px 0px 4px #4b8119;
+}
+
+header h1 a{
+    color: #70b231;
+}
+
+.main-logo{
+    width: 770px;
+    margin: 0px auto;
+    padding-top: 2em;
+}
+
+.main-logo img{
+    display: block;
+    width: 140px;
+    margin: 0px auto;
+}
+
+/*NAV*/
+
+.nav{
+    width: 100%;
+    background-color: #ddd;
+    height: 3em;
+    color: whitesmoke;
+    font-size: 1.1em;
+    box-shadow: 0px 0px 2px gray;
+}
+
+.nav ul{
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.nav > ul > li{
+    line-height: 3em;
+    float: left;
+    border-right: 1px solid gray;
+    /* margin-left: 0.2em; */
+    transition: all 300ms;
+}
+
+.nav > ul > li:hover{
+    background-color: #aaaaaa;
+    box-shadow: 0px 0px 4px black;
+    /* color: gray; */
+}
+
+.nav > ul > li:first-child{
+    border-left: 1px solid gray;
+    margin-left: 15px;
+}
+
+.nav > ul > li a{
+    display: block;
+    padding-left: 1.58em;
+    padding-right: 1.58em;
+    color: #3b6949;
+    font-weight: bold;
+}
+
+.nav > ul > li > ul{
+    display: none;
+    position: absolute;
+    box-shadow: 0px 2px 2px gray;
+    width: 170px;
+    z-index: 1;
+    margin-left: 0px;
+}
+
+.nav > ul > li:hover > ul{
+    display: block;
+    border: 1px solid gray;
+}
+
+.nav > ul > li:hover > ul li{
+    background-color: #ddd;
+    border-bottom: 1px solid #aaa;
+}
+
+.nav > ul > li:hover > ul li:hover{
+    background-color: #bbb;
+    box-shadow: 0px 0px 4px gray inset;
+}
+
+/* CONTENT */
+
+#content{
+    /* background-color: #3b6949; */
+    width: 100%;
+    min-height: 100em;
+    margin: 0px auto;
+}
+
+/* ASIDE */
+
+#aside, #phrase{
+    clear: both;
+    background-color: white;
+    float: left;
+    width: 200px;
+    margin: 2em;
+    border: 1px soid gray;
+    box-shadow: 0px 2px 2px #ccc;
+}
+
+#phrase{
+    padding: 10px;
+    width: 180px;
+}
+
+#aside li{
+    margin: 8px 0px 5px 20px;
+    list-style-type: square;
+}
+
+#aside .widget{
+    /* background-color: red; */
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px 10px;
+    font-size: 1.1em;
+    border-bottom: 1px solid black;
+}
+
+#aside h3{
+    display: block;
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #222222;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+}
+
+#aside div label,
+#aside div input [type="text"],
+#aside div input [type="password"],
+#aside div a{
+    display: block;
+    width: 95%;
+    margin: 2px 0px
+}
+
+#aside div input [type="button"],
+#aside div input[type="submit"],
+#aside div button,
+#aside label{
+    /* display: block; */
+    display: block;
+    margin: 10px auto;
+    /* margin: 5px; */
+    text-align: center;
+    /* padding: 100em; */
+}
+/* #aside input, #aside label{
+    margin: 5px auto;
+
+} */
