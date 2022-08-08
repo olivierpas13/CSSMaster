@@ -1,3 +1,14 @@
+@font-face{
+    font-family: "icons";
+    src: 
+    url(fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format('svg'),
+    url(fonts/websymbols-regular-webfont.eot);
+    src:
+    url(fonts/websymbols-regular-webfont.eot?iefix) format("embedded-opentype"),
+    url(fonts/websymbols-regular-webfont.woff) format("woff"),
+    url(fonts/websymbols-regular-webfont.ttf) format("ttf");
+}
+
 *{
     font-family: 'Roboto', sans-serif;
     padding: 0px;
@@ -19,6 +30,12 @@ a:hover{
 
 a:visited{
     color: #3b6949;
+}
+
+.icon{
+    font-family: "icons";
+    float: left;
+    margin-right: 5px;
 }
 
 input[type="text"],
@@ -186,7 +203,6 @@ header h1 a{
 /* ASIDE */
 
 #aside, #phrase{
-    clear: both;
     background-color: white;
     float: left;
     width: 200px;
@@ -197,6 +213,7 @@ header h1 a{
 
 #phrase{
     padding: 10px;
+    /* clear: both; */
     width: 180px;
 }
 
@@ -252,3 +269,69 @@ header h1 a{
     margin: 5px auto;
 
 } */
+/* SECCIONES */
+
+#sections{
+    float: right;
+    width: 70%;
+    padding-right: 6em;
+}
+
+#sections .titulo {
+    /* color: white !important; */
+    letter-spacing: 1px;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0px 10px 0px;
+    border-bottom: 1px solid #ccc;
+    margin-top: -1.5em;
+    color: #3b6949;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+#sections section{
+    margin-top: 2em;
+    background-color: white !important;
+    padding: 2em;
+    box-shadow: 0px 0px 5px #c9c9c9;
+    color: #2b2a2a;
+    overflow: hidden;
+}
+
+#sections article{
+    margin: 20px 10px;
+}
+
+#sections .info{
+    color: rgb(151, 150, 150);
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+#sections .stickerOne,
+#sections .stickerTwo{
+    position: absolute;
+    margin-top: -50px;
+    z-index: 0;
+}
+
+#sections .stickerTwo{
+    margin-left: 63%;
+}
+
+.history{
+    float: right;
+    margin-top: 2em;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: #3b6949;
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    padding: 20px 0px;
+    color: white;
+}
