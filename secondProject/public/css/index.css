@@ -186,7 +186,7 @@ header {
 
 #banner h1 {
   display: block;
-  width: 850px;
+  width: 100%;
   font-family: "BebasNeue";
   color: white;
   font-size: 3em;
