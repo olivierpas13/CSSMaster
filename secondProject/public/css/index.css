@@ -663,10 +663,11 @@ footer h5 {
   display: block;
   background: url("../img/pxgray.png"), white;
   height: 50px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-align: center;
   font-family: "BebasNeue";
   font-size: 40px;
+  font-weight: normal;
   line-height: 55px;
   color: black;
   border-radius: 5px;
