@@ -510,8 +510,8 @@ aside h3:first-child {
 /* ARTICLES */
 
 #articles {
-  margin-left: 4.2em;
-  margin-right: 2px;
+  /* margin-left: 4.2em;
+  margin-right: 2px; */
   width: 820px;
   float: left !important;
 }
