@@ -7,6 +7,7 @@
 }
 
 #container {
+  /* display: flex; */
   width: 90%;
   height: auto;
   margin: 0px auto;
@@ -28,7 +29,7 @@
 }
 
 .logo {
-  flex-basis: 60%;
+  /* flex-basis: 60%; */
   flex-grow: 1;
   font-style: italic;
   font-weight: 900;
@@ -62,7 +63,7 @@
   flex-wrap: wrap;
   height: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   list-style: none;
 }
 
@@ -191,3 +192,37 @@ main {
 }
 
 /* RESPONSIVE */
+@media (max-width: 1330px) {
+  #menu ul {
+    margin-top: 20px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 1000px) {
+  #header {
+    flex-flow: column;
+    height: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  main {
+    flex-direction: column;
+    /* width: auto;
+    height: auto;
+    margin: 0px; */
+  }
+  #aside {
+    margin: 0px auto;
+  }
+
+  #projects {
+    margin: 0px auto;
+  }
+
+  .project {
+    margin: 10px auto;
+  }
+}
