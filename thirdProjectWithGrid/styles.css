@@ -7,7 +7,6 @@
 }
 
 #container {
-  /* display: flex; */
   width: 90%;
   height: auto;
   margin: 0px auto;
@@ -20,17 +19,16 @@
 }
 
 #header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 60% 30%;
+  align-items: center;
+  width: 100%;
   align-items: center;
   height: 120px;
   border-bottom: 1px solid #aaa;
 }
 
 .logo {
-  /* flex-basis: 60%; */
-  flex-grow: 1;
   font-style: italic;
   font-weight: 900;
   font-size: 50px;
@@ -49,18 +47,19 @@
 }
 
 #menu {
-  flex-grow: 1;
-  flex-basis: 30%;
+  width: 100%;
   height: 100%;
   padding-right: 10px;
 }
 
 #menu > ul {
-  flex-grow: 1;
+  align-items: start;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 5px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   height: 100%;
   align-items: center;
   justify-content: center;
@@ -82,26 +81,26 @@
 }
 
 main {
-  display: flex;
+  /* justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  align-items: start;
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 #projects {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
   justify-content: space-between;
-  flex-basis: 80%;
   margin-right: 20px;
 }
 
 .project {
-  margin-right: 25px;
-  flex-grow: 1;
+  /* margin-right: 25px; */
   margin-bottom: 25px;
   border: 1px solid #ccc;
-  flex-basis: 250px;
   transition: all 300ms;
 }
 
@@ -131,11 +130,8 @@ main {
   color: gray;
 }
 #aside {
-  flex-basis: 15%;
   margin-right: 30px;
   padding: 15px;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 #aside h2 {
@@ -167,9 +163,10 @@ main {
 }
 
 #footer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  align-items: center;
+  justify-content: start;
   align-items: center;
   height: 120px;
   border-top: 1px solid #444;
@@ -177,8 +174,6 @@ main {
 
 #footer .logo {
   opacity: 0.5;
-  flex-basis: auto;
-  flex-grow: 1;
   order: 2;
   text-align: right;
   margin-right: 20px;
@@ -186,40 +181,55 @@ main {
 
 #footer .info {
   order: 1;
-  flex-grow: 1;
   margin-left: 20px;
   color: #444;
 }
 
 /* RESPONSIVE */
-@media (max-width: 1330px) {
-  #menu ul {
-    margin-top: 20px;
-    align-items: flex-start;
-    justify-content: space-evenly;
-  }
-}
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   #header {
-    flex-flow: column;
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-content: center;
     height: auto;
   }
-}
-
-@media (max-width: 450px) {
-  main {
-    flex-direction: column;
+  #header h1 {
+    text-align: center;
   }
+  main {
+    /* justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* margin: 0px auto; */
+    align-items: start;
+    justify-content: space-between;
+  }
+
   #aside {
-    margin: 0px auto;
+    margin: 0px;
   }
 
   #projects {
-    margin: 0px auto;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    /* margin-right: 20px; */
+  }
+  .project {
+    margin: 10px;
   }
 
-  .project {
-    margin: 10px auto;
+  #footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #footer .logo {
+    text-align: center;
   }
 }
